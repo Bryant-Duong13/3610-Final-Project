@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA River Heritage Ride - LA County Trails</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* navigation bar */
+        nav {
+            background: #52A624;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* LA County Trails text */
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+        }
+
+        /* navigation links */
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links-text {
+            font-family: 'Playfair Display';
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        /* hero section */
+        .hero {
+            /* BACKGROUND AND SPACING */
+            background-color: #e8e8e8;
+            background: url('img/LARiverHero.jpg');
+            padding: 80px 60px;
+            text-align: center;
+        }
+
+        .hero-h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: black;
+            text-shadow: 2px 2px 3px white;
+        }
+
+        .hero-p {
+            font-family: 'Playfair Display';
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            line-height: 1.6;
+            color: white;
+            text-shadow: 2px 2px 3px black;
+        }
+
+        /* hero buttons */
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .hero-btn {
+            font-family: 'Playfair Display', serif;
+            padding: 16px 36px;
+            background: #8A6337;
+            color: white;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* main content container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        /* three column layout */
+        .three-column {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        /* overview section */
+        .overview-h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .overview-p {
+            font-family: 'Playfair Display';
+            font-size: 16px;
+            line-height: 1.8;
+            color: black;
+            margin-bottom: 30px;
+        }
+
+        /* trail details */
+        .trail-details {
+            background: #52A624;
+            border-radius: 30px;
+            padding: 30px;
+        }
+
+        .trail-details-h3 {
+            font-family: 'Playfair Display';
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: black;
+            text-align: center;
+        }
+
+        .trail-details-p {
+            font-family: 'Playfair Display';
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: black;
+            text-align: center;
+        }
+
+        /* trail map */
+        .trail-map h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            color: black;
+        }
+
+        /* map image*/
+        .map-image {
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+            background: url(img/TrailMap.jpg);
+            border-radius: 20px;
+            aspect-ratio: 2.2/3;
+        }
+
+        /* highlights section */
+        .highlight-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: #1a1a1a;
+        }
+
+        .highlight-item-h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .highlight-item-p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: black;
+        }
+
+        /* Photos header*/
+        .photos-h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #1a1a1a;
+        }
+
+        /* photos section */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        /* trail images */
+        .trail-images {
+            border-radius: 16px;
+            aspect-ratio: 5/5;
+            margin-right: 50px;
+            margin-left: -55px;
+        }
+
+        a:hover {
+            color: #8A6337;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        .hero-btn:hover {
+            background-color: #52A624;
+            color: white;
+        }
+
+        /* Apply this to all screen sizes */
+        .three-column,
+        .trail-details,
+        .photo-grid {
+            grid-template-columns: 1fr;
+        }
+
+        /* Apply styles when the screen is 768px or larger */
+        @media (min-width: 768px) {
+
+            .trail-details,
+            .photo-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        /* Apply styles when the screen is 1024 px or larger */
+        @media (min-width: 1024px) {
+            .three-column {
+                grid-template-columns: 1fr 2fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">LA County Trails</div>
+        <ul class="nav-links">
+            <li><a class="nav-links-text " href="home.html">Home</a></li>
+            <li><a class="nav-links-text " href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
+    <section class="hero">
+        <h1 class="hero-h1">LA River Heritage Ride</h1>
+        <p class="hero-p">Explore a trail of Los Angeles County's that highlight the continous development within the
+            city</p>
+        <div class="hero-buttons">
+            <a
+                href="https://www.komoot.com/tour/2902672401?share_token=ae47W3BCSnAlZjE5bVj8i2okAX14GFMO9blXqJvNjo1H3CWFP8&ref=wtd&t_s=referral&t_cid=route_share&t_ref_username=5695940608251">
+                <button class="hero-btn">View Trail</button>
+            </a>
+            <a href="#photosection">
+                <button class="hero-btn">Photos</button>
+            </a>
+        </div>
+    </section>
+    <div class="container">
+        <section class="three-column">
+            <div class="overview">
+                <h2 class="overview-h2">Overview</h2>
+                <p class="overview-p">The LA River Heritage Ride is a scenic bike route along the Los Angeles River,
+                    connecting the natural
+                    Glendale Narrows to the revitalized Los Angeles State Historic Park.</p>
+                <div class="trail-details">
+                    <h3 class="trail-details-h3">Trail Details</h3>
+                    <p class="trail-details-p"><strong>Location:</strong> Glendale, U.S.</p>
+                    <p class="trail-details-p"><strong>Distance:</strong> ~10 miles</p>
+                    <p class="trail-details-p"><strong>Time:</strong> ~1 Hours</p>
+                    <p class="trail-details-p"><strong>Difficulty:</strong> Easy</p>
+                    <p class="trail-details-p"><strong>More Info:</strong> <a
+                            href="https://www.komoot.com/tour/2902672401?share_token=ae47W3BCSnAlZjE5bVj8i2okAX14GFMO9blXqJvNjo1H3CWFP8&ref=wtd&t_s=referral&t_cid=route_share&t_ref_username=5695940608251">Kamoot</a>
+                    </p>
+
+                </div>
+            </div>
+            <div class="trail-map">
+                <h2>Trail Map</h2>
+                <div class="map-image">
+                </div>
+            </div>
+            <div class="highlight-text">
+                <h2>Highlight And History</h2>
+                <div class="highlight-item">
+                    <h4 class="highlight-item-h4">Glendale Narrows</h4>
+                    <p class="highlight-item-p">A rare natural-bottom stretch of the LA River, preserved due to a high
+                        water table, offering a
+                        glimpse of the river before its post-1938 flood concrete channelization.</p>
+                </div>
+                <div class="highlight-item">
+                    <h4 class="highlight-item-h4">Los Angeles River Bike Path</h4>
+                    <p class="highlight-item-p">Developed along the former industrial corridors, the path reflects late
+                        20th-century efforts to
+                        reconnect communities to the river through recreation and urban renewal.</p>
+                </div>
+                <div class="highlight-item">
+                    <h4 class="highlight-item-h4">Los Angeles State Historic Park</h4>
+                    <p class="highlight-item-p">Once the Southern Pacific Railroad's River Station yard (late
+                        1800s-1990s), now redeveloped into
+                        a park representing LA's shift from rail industry to public green space</p>
+                </div>
+            </div>
+        </section>
+        <h2 class="photos-h2" id="photosection">Photos From The Trail</h2>
+        <div class="photo-grid">
+            <div class="trail-images">
+                <img src="img/TrailImage1.jpg" alt="Glendale Narrows" />
+            </div>
+
+            <div class="trail-images">
+                <img src="img/TrailImage2.jpg" alt="LA River Path" />
+            </div>
+
+            <div class="trail-images">
+                <img src="img/TrailImage3.jpg" alt="LA State Historic Park" />
+            </div>
+        </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>

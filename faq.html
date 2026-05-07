@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA Trails - FAQs</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fdfdfd;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* FAQ HERO SECTION */
+        .faq-hero {
+            min-height: 400px;
+            background: url('img/LAHeader.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 24px;
+            margin-bottom: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .faq-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            font-weight: 900;
+            color: white;
+            text-shadow: 3px 3px 5px black;
+            letter-spacing: 2px;
+        }
+
+        /* FAQ ACCORDION STYLING */
+        .faq-item {
+            background: #52A624;
+            border-radius: 28px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .faq-item summary {
+            padding: 30px 40px;
+            list-style: none;
+            cursor: pointer;
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Customizes the dropdown arrow */
+        .faq-item summary::after {
+            content: '▼';
+            font-size: 14px;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        /* The Answer Content Area */
+        .faq-content {
+            background: white;
+            padding: 30px 40px;
+            margin: 0 10px 10px 10px;
+            border-radius: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            line-height: 1.8;
+            color: black;
+        }
+
+        .faq-content h3 {
+            margin-top: 0;
+            font-weight: 700;
+            color: #1a1a1a;
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            border-bottom: 2px solid #52A624;
+            padding-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        /* Styled Essentials List */
+        .faq-content li {
+            list-style: none;
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .faq-content li::before {
+            content: "■";
+            color: #283d24;
+            /* NPS Green */
+            position: absolute;
+            left: 0;
+            font-size: 0.8rem;
+            top: 4px;
+        }
+
+        /* Bike Shop Directory */
+        .shop-list {
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .shop-list li {
+            background: #f9f9f9;
+            padding: 20px 20px 20px 45px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+
+        .shop-link {
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .shop-link strong {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            color: #52A624;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* CONSISTENT NAVIGATION */
+        nav {
+            background: #52A624;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            margin: 0;
+        }
+
+        .nav-links-text {
+            font-family: 'Playfair Display', serif;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        a:hover {
+            color: #8A6337;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+
+    </style>
+</head>
+
+<!-- HEADER SECTION -->
+
+<body>
+    <nav>
+        <div class="logo">LA County Trails</div>
+        <ul class="nav-links">
+            <li><a class="nav-links-text" href="home.html">Home</a></li>
+            <li><a class="nav-links-text" href="trail-detail-page.html">Trail of the Week</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="container">
+        <section class="faq-hero">
+            <h1>Frequently Asked Questions</h1>
+        </section>
+
+        <details class="faq-item">
+            <summary>Are these trails safe for children or beginners? <span class="label"></span></summary>
+            <div class="faq-content">
+                <p>Most trails listed are Class I, removing the dangers of common city traffic. Because of this, most
+                    trails are ideal for families.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>What are the general rules for biking in LA? <span class="label"></span></summary>
+            <div class="faq-content">
+                <p>Always wear a helmet if under 18, yield to pedestrians, and use hand signals.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>Does this site own or maintain these trails? <span class="label"></span></summary>
+            <div class="faq-content">
+                <p>This site manages and updates trail information for beginner and veteran bikers alike. Though we
+                    provide information on each trail we cover, we do not own or maintain any LA trail. We do not limit
+                    liability for any deaths or personal injuries caused by negligence, fraud, or willful
+                    misconduct/gross negligence while exploring any of our highlighted trails.</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>What essentials should I carry when biking in LA? <span class="label"></span></summary>
+            <div class="faq-content">
+                <p>Preparation is key for traveling any distance, especially for bikers. Make sure you have some food,
+                    water, and a reliable map or GPS for each trip.
+                <h3>Essentials</h3>
+                <li>Water: Water is absolutely necessary when biking long distances in LA. Make sure to carry at
+                    least two water bottles for every trip or make sure you have water available along the trail.</li>
+                <li>Food: Make sure to prepare some calories on the road. Packing some readiliy available food will
+                    help give you the boost of energy you need to finish the trail.</li>
+                <li>GPS: *Always know where you are!* A GPS can help you find your way after getting lost.</li>
+                <li>Helmets: Helmets are non-negotiable for minors (any individual under the age of 18)! Make sure
+                    you and your children are following California Safety Laws while exploring LA's biking trails.</li>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>Does this site work offline? <span class="label"></span></summary>
+            <div class="faq-content">
+                <p>This site is hosted on your local device! Unfortunately, our services will not be able to update
+                    without a proper internet connection. We suggest you download the webpage ahead of time so that you
+                    are able to access the contents even when you are offline!</p>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>Where can I rent a bike near these trails? <span class="label"></span></summary>
+            <div class="faq-content">
+                <p>There are many local bike shops across the Greater Los Angeles Area. Some of the most well-renowned
+                    bike shops in the area are listed below: </p>
+                <ul class="shop-list">
+                    <li>
+                        <a href="https://www.helenscycles.com/" target="_blank" class="shop-link">
+                            <strong>Helen's Cycles (Santa Monica & Multiple Locations)</strong>
+                        </a>
+                        Since 1936, this store has sold bicycles and other biking equipment in the LA area. Make sure to
+                        visit to explore their large selection of products and repair services.
+                    </li>
+                    <li>
+                        <a href="https://www.bikeshopsantamonica.com/" target="_blank" class="shop-link">
+                            <strong>The Bike Shop Santa Monica (Main St)</strong>
+                        </a>
+                        Specialized for electric bike enthusiasts and those looking for personal, neighborhood-focused
+                        service near the beach. If you need a bike on the go, make sure to stop here!
+                    </li>
+                    <li>
+                        <a href="https://www.bikeattack.com/" target="_blank" class="shop-link">
+                            <strong>Bike Attack (Santa Monica/Playa Vista)</strong>
+                        </a>
+                        Bike Attack is a well-known store for sports products including road, mountain, and electric
+                        bikes. If you're looking for an affordable bike, don't skip out on this shop!
+                    </li>
+                    <li>
+                        <a href="https://www.dtlabikes.com/" target="_blank" class="shop-link">
+                            <strong>DTLA Bikes (Broadway)</strong>
+                        </a>
+                        Located in the heart of Downtown Los Angeles, this bike shop is a biker's heaven for urban
+                        commuters and cyclists in the area. Recommended for daily biking and varius traveling
+                        knickknacks.
+                    </li>
+                    <li>
+                        <a href="https://www.beverlyhillsbikeshop.com/" target="_blank" class="shop-link">
+                            <strong>Beverly Hills Bike Shop</strong>
+                        </a>
+                        Looking to splurge on a fancy new bike? Make your to Beverley Hills Bike Shop for their premium
+                        selection of high-quality bicycles and traveling supplies! If you are in the West L.A. are come
+                        check out their exquisite selection.
+                    </li>
+                </ul>
+            </div>
+        </details>
+    </main>
+
+</body>
+
+</html>
